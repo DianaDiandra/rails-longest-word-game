@@ -1,0 +1,17 @@
+<div class="container">
+  <h1> New Game </h1>
+  <div class="letter-grid">
+    <% @letters.each do |letter| %>
+      <div class="letter-tile"><%= letter %></div>
+    <% end %>
+  </div>
+  <div  class="form-box" >
+  <form action="/score" method="post" data-turbo="false">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag :letters, @letters.join %>
+    <p class="mt-3"> What is the longest word you can find? </p>
+    <input type="text" name="word">
+    <input class="submit-button" type="submit" value="Play">
+  </form>
+  </div>
+</div>

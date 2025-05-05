@@ -1,0 +1,20 @@
+<div class="container">
+  <h1> Result </h1>
+  <p><%= @message %></p>
+
+  <% if @result == :not_in_grid %>
+    <p>  Sorry but <strong><%= @word %></strong> can't be built out of
+    <strong><%= @letters.join(', ') %></strong>
+    </p>
+  <% elsif @result == :not_english %>
+    <p>
+      Sorry but <strong><%= @word %></strong> is not a valid English word.
+    </p>
+  <% else @result == :success %>
+    <p>
+     <strong>Congratulations!</strong> <%= @word %> is a valid English word!
+    </p>
+  <% end %>
+
+  <%= link_to "Play again", new_path, class: 'no-underline' %>
+</div>

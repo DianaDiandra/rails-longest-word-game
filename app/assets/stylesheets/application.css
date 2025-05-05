@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+ .container {
+  margin-top: 40px;
+  
+}
+
+a.no-underline {
+  text-decoration: none;
+}
+
+.letter-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.letter-tile {
+  background-color: #3498db; /* Bootstrap blue */
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
